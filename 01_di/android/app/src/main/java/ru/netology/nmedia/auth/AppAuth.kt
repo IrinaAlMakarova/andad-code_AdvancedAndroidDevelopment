@@ -22,7 +22,8 @@ import javax.inject.Singleton
 
 @Singleton
 class AppAuth @Inject constructor(
-    @ApplicationContext private val context: Context,
+    @ApplicationContext
+    private val context: Context,
 ) {
     private val prefs = context.getSharedPreferences("auth", Context.MODE_PRIVATE)
     private val idKey = "id"
